@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BlockMed — Contact</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header bg-ocean">
+  <div class="wrap">
+    <a class="logo" href="index.html">BlockMed</a>
+    <a class="social-icon" href="#" aria-label="Telegram">&#10148;</a>
+  </div>
+</header>
+<nav class="site-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="community.html">Community</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="bg-ocean">
+  <div class="wrap">
+    <h1 class="page-title" style="color:#fff;">Contact Us</h1>
+
+    <div class="contact-layout">
+      <div class="address">1 Embarcadero Center,<br>Suite 500, San Francisco,<br>CA 94111</div>
+
+      <form class="form-card" action="mailto:contact@blockmed.ai" method="post" enctype="text/plain">
+        <label for="name">Name *</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="email">Email *</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" type="text">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message"></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <p style="color:rgba(255,255,255,0.85); font-size:0.85rem; margin-top:16px;">
+      Note: this form currently opens your email client (mailto). Replace with a real form
+      backend (e.g. Formspree, a Cloudflare Worker, etc.) before going live — and confirm the
+      real contact address.
+    </p>
+
+    <div class="map-embed">
+      <iframe
+        src="https://www.google.com/maps?q=1+Embarcadero+Center,+San+Francisco,+CA+94111&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Map"></iframe>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; 2018 provided you by BlockMed.ai</span>
+    <a href="#">Privacy Policy</a>
+  </div>
+</footer>
+
+</body>
+</html>
