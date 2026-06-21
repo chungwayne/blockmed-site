@@ -31,7 +31,7 @@
     <div class="contact-layout">
       <div class="address">1 Embarcadero Center,<br>Suite 500, San Francisco,<br>CA 94111</div>
 
-      <form class="form-card" action="mailto:contact@blockmed.ai" method="post" enctype="text/plain">
+      <form class="form-card" id="contactForm">
         <label for="name">Name *</label>
         <input id="name" name="name" type="text" required>
 
@@ -47,12 +47,6 @@
         <button type="submit">Send</button>
       </form>
     </div>
-
-    <p style="color:rgba(255,255,255,0.85); font-size:0.85rem; margin-top:16px;">
-      Note: this form currently opens your email client (mailto). Replace with a real form
-      backend (e.g. Formspree, a Cloudflare Worker, etc.) before going live — and confirm the
-      real contact address.
-    </p>
 
     <div class="map-embed">
       <iframe
@@ -70,6 +64,20 @@
     <a href="#">Privacy Policy</a>
   </div>
 </footer>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('name').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var subject = document.getElementById('subject').value.trim() || ('Website contact from ' + (name || 'visitor'));
+    var message = document.getElementById('message').value.trim();
+    var body = 'Name: ' + name + '\n' + 'Email: ' + email + '\n\n' + message;
+    window.location.href = 'mailto:wc@blockmed.ai'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+  });
+</script>
 
 </body>
 </html>
